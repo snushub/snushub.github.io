@@ -25,7 +25,7 @@ class PageBuilder():
             """
         self.output_file = "snus_rating_pages/" + str(input("Filename -> "))
         self.snus_name = str(input("Snus Name -> "))
-        self.image_path = str(input("Image path -> "))
+        self.image_path = "assets/tegel/" + str(input("Image path -> "))
         self.criteria = ["Taste", "Nicotine hit", "Drip taste", "Design", "Smell", "Pouch Size", 
                     "Quantity", "Price", "Aura", "Hit diagram", "Recommendation"]
         
