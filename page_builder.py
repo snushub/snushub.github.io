@@ -1,5 +1,4 @@
-
-class PageBuilder():
+class PageBuilder:
     def __init__(self):
         self.full_html_content = """
             <!DOCTYPE html>
@@ -26,9 +25,23 @@ class PageBuilder():
         self.output_file = "snus_rating_pages/" + str(input("Filename -> "))
         self.snus_name = str(input("Snus Name -> "))
         self.image_path = "assets/tegel/" + str(input("Image path -> "))
-        self.criteria = ["Nicotine", "Taste", "Nicotine hit", "Drip taste", "Reusability", "Design", "Smell", "Pouch Size", 
-                    "Quantity", "Price", "Aura", "Hit diagram", "Recommendation"]
-        
+        self.criteria = [
+            "Nicotine",
+            "Taste",
+            "Nicotine hit strength",
+            "Hit quality",
+            "Drip taste",
+            "Reusability",
+            "Design",
+            "Smell",
+            "Pouch Size",
+            "Quantity",
+            "Price",
+            "Aura",
+            "Hit diagram",
+            "Recommendation",
+        ]
+
         self.snus_box_builder()
         self.add_page_bottom()
         self.create_file()
@@ -41,12 +54,12 @@ class PageBuilder():
         output += '<img src="../' + self.image_path + '" class="fullscreen-image">'
         self.overall_rating = str(input("Overall rating: "))
         output += "<p>Overall rating: " + self.overall_rating + "</p><hr>"
-        for crit in self.criteria: 
+        for crit in self.criteria:
             val = str(input(crit + " -> "))
             output += "<p>" + crit + ": " + val + "</p>"
         output += "</div>"
         self.full_html_content += output
-    
+
     def add_page_bottom(self):
         self.full_html_content += """
             </main>
@@ -60,10 +73,11 @@ class PageBuilder():
 
             </html>
             """
+
     def create_file(self):
         with open(self.output_file, "w") as file:
             file.write(self.full_html_content)
-            
+
     def add_link_to_page_index(self):
         template = """
         <a href="snus_rating_pages/killa_cold_mint.html" class="link-wrapper">
@@ -74,24 +88,31 @@ class PageBuilder():
             </div>
         </a>
             """
-        
-        injection = '<a href="'+ self.output_file + '" class="link-wrapper"> <div class="snus-box">'
+
+        injection = (
+            '<a href="'
+            + self.output_file
+            + '" class="link-wrapper"> <div class="snus-box">'
+        )
         injection += "<h3>" + self.snus_name + "</h3>"
         injection += '<img src="' + self.image_path + '" class="fullscreen-image">'
-        injection += "<p>Overall rating: "+ self.overall_rating + "</p> </div> <a>"
-        
-        
-        with open("index.html", 'r', encoding='utf-8') as file:
+        injection += "<p>Overall rating: " + self.overall_rating + "</p> </div> <a>"
+
+        with open("index.html", "r", encoding="utf-8") as file:
             self.index_html_content = file.read()
 
         main_index = self.index_html_content.find("<main>") + len("<main>")
 
-        new_html_content = self.index_html_content[:main_index] + injection + self.index_html_content[main_index:]
-        with open("index.html", 'w', encoding='utf-8') as file:
+        new_html_content = (
+            self.index_html_content[:main_index]
+            + injection
+            + self.index_html_content[main_index:]
+        )
+        with open("index.html", "w", encoding="utf-8") as file:
             file.write(new_html_content)
+
 
 PageBuilder()
 
 
 print("File has been generated")
-
