@@ -1,0 +1,20 @@
+        SNUS IMAGE
+
+Overall rating progress bar (center)
+horizontal line
+
+Nicotine mg  | quantity | price
+
+HIT strength | hit quality
+taste        | drip taste
+smell        | design 
+
+HIT DIAGRAM
+
+Further information toggle list:
+1. pouch size
+2. Reusability
+3. AURA
+4. Recommendation
+
+
