@@ -43,8 +43,10 @@ main {
     display: block; /* Make the link behave like a block element */
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: #333;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .review {
@@ -70,7 +72,6 @@ footer {
 .rating-box {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
 }
 
 #first {
@@ -99,7 +100,7 @@ footer {
   .progress-bar-labels {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-top: 5px;
   }
   
   .progress-bar-labels span {
@@ -171,11 +172,7 @@ footer {
 
 
 
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
+ 
   
   .toggle-list {
     margin-bottom: 10px;
