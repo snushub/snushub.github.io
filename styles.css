@@ -81,6 +81,14 @@ footer {
 }
 
 
+.progress-overlay {
+  background-color:#e0e0e0; /* Gradient colors */
+  border-radius: 10px 0 0 10px; /* Rounded left edge */
+  height: 20px;
+  z-index: 1;
+  width: 50%;
+}
+
 .progress-bar-container {
     width: 80%;
     max-width: 600px;
@@ -112,6 +120,8 @@ footer {
     );
     overflow: hidden;
   }
+
+
   
   .indicator {
     position: absolute;
