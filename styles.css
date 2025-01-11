@@ -182,7 +182,7 @@ footer {
   }
   
   .toggle-header {
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     padding: 5px;
     cursor: pointer;
     display: flex;
@@ -191,7 +191,7 @@ footer {
   }
   
   .toggle-header:hover {
-    background-color: #e0e0e0;
+    background-color: #f4f4f4;
   }
   
   .toggle-icon {
