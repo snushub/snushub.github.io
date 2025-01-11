@@ -1,4 +1,4 @@
-class PageBuilder:
+class PageBuilderOld:
     def __init__(self):
         self.full_html_content = """
             <!DOCTYPE html>
@@ -28,7 +28,7 @@ class PageBuilder:
         self.criteria = [
             "Nicotine",
             "Taste",
-            "Nicotine hit strength",
+            "Hit strength",
             "Hit quality",
             "Drip taste",
             "Reusability",
@@ -112,7 +112,7 @@ class PageBuilder:
             file.write(new_html_content)
 
 
-PageBuilder()
+PageBuilderOld()
 
 
 print("File has been generated")
