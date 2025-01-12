@@ -18,3 +18,33 @@ Further information toggle list:
 4. Recommendation
 
 
+
+dict = {
+
+        page_title
+        snus_name
+        img_filename
+        indicator_percentage (overall_rating *10)
+        overall_rating
+        overlay_width (100-indicator_percentage)
+        nicotine
+        quantity
+        price
+        hit_strength (x*10)
+        taste
+        smell
+        hit_quality
+        drip_taste
+        design
+        pouch_size
+        reusability
+        aura
+        recommendation
+}
+
+
+
+
+
+
+
