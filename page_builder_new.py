@@ -5,18 +5,18 @@ class PageBuilderNew:
         self.snus_name = str(input("Snus name -> "))
         self.page_title = self.snus_name.lower().replace(" ", "-")
         self.img_filename = str(input("Image filename -> "))
-        self.overall_rating = str(int(input("Overall rating -> ")))
-        self.i_p = str(int(self.overall_rating) * 10)
-        self.overlay_w = str(100 - int(self.i_p))
+        self.overall_rating = str(float(input("Overall rating -> ")))
+        self.i_p = str(float(self.overall_rating) * 10)
+        self.overlay_w = str(100 - float(self.i_p))
         self.nicotine = str(input("Nicotine -> "))
         self.quantity = str(input("Quantity -> "))
         self.price = str(input("Price -> "))
-        self.hit_s = str(int(input("Hit strength -> ")) * 10)
-        self.taste = str(int(input("Taste -> ")) * 10)
-        self.smell = str(int(input("Smell -> ")) * 10)
-        self.hit_q = str(int(input("Hit quality -> ")) * 10)
-        self.drip_t = str(int(input("Drip taste -> ")) * 10)
-        self.design = str(int(input("Design -> ")) * 10)
+        self.hit_s = str(float(input("Hit strength -> ")) * 10)
+        self.taste = str(float(input("Taste -> ")) * 10)
+        self.smell = str(float(input("Smell -> ")) * 10)
+        self.hit_q = str(float(input("Hit quality -> ")) * 10)
+        self.drip_t = str(float(input("Drip taste -> ")) * 10)
+        self.design = str(float(input("Design -> ")) * 10)
         self.pouch_size = str(input("Pouch size -> "))
         self.reusability = str(input("Reusability -> "))
         self.aura = str(input("Aura -> "))
@@ -27,7 +27,6 @@ class PageBuilderNew:
             snus_name=self.snus_name,
             img_filename=self.img_filename,
             indicator_percentage=self.i_p,
-            overall_rating=self.overall_rating,
             overlay_width=self.overlay_w,
             nicotine=self.nicotine,
             quantity=self.quantity,
@@ -51,8 +50,8 @@ class PageBuilderNew:
         html_content = template.format(**self.data)
 
         # Save the result to a new HTML file
-        output_file = "snus_rating_pages/" + self.filename
-        with open(output_file, "w") as file:
+        self.output_file = "snus_rating_pages/" + self.filename
+        with open(self.output_file, "w") as file:
             file.write(html_content)
 
         print(f"Page has been created successfully!")
@@ -65,7 +64,10 @@ class PageBuilderNew:
         )
         injection += "<h3>" + self.snus_name + "</h3>"
         injection += (
-            '<img src="' + self.image_path + '" class="fullscreen-image"></div> <a>'
+            '<img src="'
+            + "assets/tegel/"
+            + self.img_filename
+            + '" class="fullscreen-image"></div> <a>'
         )
 
         with open("index.html", "r", encoding="utf-8") as file:

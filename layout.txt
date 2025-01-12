@@ -20,7 +20,6 @@ Further information toggle list:
 
 
 dict = {
-
         page_title
         snus_name
         img_filename
