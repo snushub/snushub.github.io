@@ -3,14 +3,16 @@ import sys
 
 
 class GraphMaker:
-    def __init__(self, line_t, file_n):
+    def __init__(self, line_t, file_n, snus_name):
         self.white = (1.0, 1.0, 1.0)  # Scaled to [0, 1]
         self.black = (0.0, 0.0, 0.0)
+        self.gray = (51 / 255.0, 51 / 255.0, 51 / 255.0)
         self.w = 600
         self.h = 400
         self.line_t = line_t
         self.line_c = (139 / 255.0, 0 / 255.0, 139 / 255.0)  # Scaled to [0, 1]
         self.fn = "assets/graphs/" + file_n
+        self.snus_name = snus_name
         self.start_pos = (10, 390)
         self.START = (10, 390)  # Do not overwrite
         self.min_x = 10
@@ -35,7 +37,7 @@ class GraphMaker:
         self.context.set_antialias(cairo.ANTIALIAS_BEST)
 
     def prep(self):
-        self.context.set_source_rgb(81 / 255.0, 81 / 255.0, 81 / 255.0)
+        self.context.set_source_rgb(*self.gray)
         ht = int(self.line_t / 2)
         self.context.move_to(self.min_x - ht, self.min_y + ht)
         self.context.line_to(self.min_x - ht, self.max_y + ht)
@@ -59,6 +61,8 @@ class GraphMaker:
         x = int((self.lim_x - self.min_x) / (len(l) - 1))
         if len(l) - 1 == 1:
             self.lim_x = 250
+        elif len(l) - 1 == 2:
+            self.lim_x = 310
         xoff = self.min_x
         for i in y[:-1]:
             offset = int(x / 2)
@@ -93,29 +97,76 @@ class GraphMaker:
 
         self.context.stroke()
 
+    def add_snus_name(self):
+        self.context.select_font_face(
+            "Poppins", cairo.FontSlant.NORMAL, cairo.FontWeight.NORMAL
+        )
+        self.context.set_font_size(17)
+        self.context.set_source_rgb(*self.gray)
+        text = self.snus_name
+        right_boundary = self.max_x - 5
+        extents = self.context.text_extents(text)
+        text_width = extents.width
+        x_pos = right_boundary - text_width
+
+        self.context.move_to(x_pos, self.min_y * 5)
+        self.context.show_text(self.snus_name)
+
     def exec(self, l: list, colors: list):
         if len(l) != len(colors):
             raise ValueError(
                 "The length of the data list must match the length of the colors list."
             )
         self.setup()
-        self.prep()
+
+        if len(l) == 1:
+            self.add_snus_name()
         for i, x in enumerate(l):
             self.start_pos = self.START
             self.set_points_and_draw(x, colors[i])
+
+        self.prep()
         self.export()
 
 
 if __name__ == "__main__":
-    gm = GraphMaker(8, "test.svg")
-    y1 = [2, 4, 9, 2]
-    y2 = [4, 10, 4]
-    y3 = [3, 5, 8, 2]
-    ll = [y1, y2, y3]
-    royalblue = (65, 105, 225)
-    sgi_chartreuse = (113, 198, 113)
-    purple = (128, 0, 128)
-    colors = [royalblue, purple, sgi_chartreuse]
+    ### Usage for multiple graphs: #######
+    # y1 = [2, 4, 9, 2]
+    # y2 = [4, 10, 4]
+    # y3 = [3, 5, 8, 2]
+    # ll = [y1, y2, y3]
+    # royalblue = (65, 105, 225)
+    # sgi_chartreuse = (113, 198, 113)
+    # purple = (128, 0, 128)
+    # colors = [royalblue, purple, sgi_chartreuse]
     # gm.exec(ll, colors)
-    gm.exec([[9, 2]], [purple])
+    #######################################
+    ## Single graph: #############
+    # gm.exec([[9, 2]], [purple])
+    ##############################
+    crimson_red = (220, 20, 60)
+    deep_sky_blue = (0, 191, 255)
+    lime_green = (50, 205, 50)
+    gold = (255, 215, 0)
+    hot_pink = (255, 105, 180)
+    dark_orange = (255, 140, 0)
+    medium_purple = (147, 112, 219)
+    cyan = (0, 255, 255)
+    chartreuse = (127, 255, 0)
+    magenta = (255, 0, 255)
+    deep_pink = (255, 20, 147)
+    orange_red = (255, 69, 0)
+    dodger_blue = (30, 144, 255)
+    spring_green = (0, 255, 127)
+    yellow = (255, 255, 0)
+    orchid = (218, 112, 214)
+    tomato = (255, 99, 71)
+    turquoise = (64, 224, 208)
+    medium_sea_green = (60, 179, 113)
+    sandy_brown = (244, 164, 96)
+
+    gm = GraphMaker(8, "killa_blue_raspberry.svg", "Killa Blue Raspberry")
+    y = [4, 1.5]
+    gm.exec([y], [deep_sky_blue])
+
     sys.exit()

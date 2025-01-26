@@ -67,7 +67,7 @@ class PageBuilderNew:
             '<img src="'
             + "assets/tegel/"
             + self.img_filename
-            + '" class="fullscreen-image"></div> <a>'
+            + '" class="fullscreen-image"></div> </a>'
         )
 
         with open("index.html", "r", encoding="utf-8") as file:
