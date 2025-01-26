@@ -5,6 +5,7 @@ class PageBuilderNew:
         self.snus_name = str(input("Snus name -> "))
         self.page_title = self.snus_name.lower().replace(" ", "-")
         self.img_filename = str(input("Image filename -> "))
+        self.img_filename_svg = str(input("SVG Image filename -> "))
         self.overall_rating = str(float(input("Overall rating -> ")))
         self.i_p = str(float(self.overall_rating) * 10)
         self.overlay_w = str(100 - float(self.i_p))
@@ -26,6 +27,7 @@ class PageBuilderNew:
             page_title=self.page_title,
             snus_name=self.snus_name,
             img_filename=self.img_filename,
+            img_filename_svg=self.img_filename_svg,
             indicator_percentage=self.i_p,
             overlay_width=self.overlay_w,
             nicotine=self.nicotine,
