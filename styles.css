@@ -29,7 +29,7 @@ main {
 .home-page {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 15px; /* Space between grid items */
+  gap: 5px; /* Space between grid items */
   padding: 0px; /* Add padding around the grid */
 }
 
@@ -39,7 +39,7 @@ main {
   flex-direction: column; /* Align content vertically */
   align-content: space-between;
   align-items: center; /* Center-align the text and image */
-  padding: 15px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

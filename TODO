@@ -1,0 +1,11 @@
+SHALLOW: 
+    - add filter
+    - add 3 bars for categories
+    - make the graph fit in somehow
+    - make the progress-bar explode or be colored when something exceeds the boundary
+
+DEEP: 
+    - add a buying guide that matches a snus to a buyers desires
+    - add all the data regarding every category in a big *.json for storage and so 
+        that the whole fucking website does not have to be remade every fucking time
+
