@@ -1,3 +1,8 @@
+#############################################
+## DO NOT USE THIS CODE SINCE IT IS BROKEN ##
+#############################################
+
+
 class PageBuilderOld:
     def __init__(self):
         self.full_html_content = """
@@ -22,7 +27,7 @@ class PageBuilderOld:
                 <main>
 
             """
-        self.output_file = "snus_rating_pages/" + str(input("Filename -> "))
+        self.output_file = "snusRatingPages/" + str(input("Filename -> "))
         self.snus_name = str(input("Snus Name -> "))
         self.image_path = "assets/tegel/" + str(input("Image path -> "))
         self.criteria = [
@@ -80,7 +85,7 @@ class PageBuilderOld:
 
     def add_link_to_page_index(self):
         template = """
-        <a href="snus_rating_pages/killa_cold_mint.html" class="link-wrapper">
+        <a href="snusRatingPages/killa_cold_mint.html" class="link-wrapper">
             <div class="snus-box">
                 <h3>Killa Cold Mint</h3>
                 <img src="assets/tegel/killa_cold_mint.png" class="fullscreen-image">

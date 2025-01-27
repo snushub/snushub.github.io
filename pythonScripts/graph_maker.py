@@ -11,7 +11,7 @@ class GraphMaker:
         self.h = 400
         self.line_t = line_t
         self.line_c = (139 / 255.0, 0 / 255.0, 139 / 255.0)  # Scaled to [0, 1]
-        self.fn = "assets/graphs/" + file_n
+        self.fn = "../assets/graphs/" + file_n
         self.snus_name = snus_name
         self.start_pos = (10, 390)
         self.START = (13, 387)  # Do not overwrite
