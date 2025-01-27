@@ -26,6 +26,40 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.home-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px; /* Space between grid items */
+  padding: 0px; /* Add padding around the grid */
+}
+
+.snus-box-main {
+  height: 170px;
+  display: flex; /* Flexbox for content alignment */
+  flex-direction: column; /* Align content vertically */
+  align-content: space-between;
+  align-items: center; /* Center-align the text and image */
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  text-align: center; /* Center-align text inside the box */
+}
+
+.snus-box-main img {
+  max-height: 150px; /* Ensure the image doesn’t overflow */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.snus-box-main h3 {
+  font-size: .95rem;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
 .snus-box {
     max-width: 800px;
     padding: 20px;
@@ -34,7 +68,6 @@ main {
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .link-wrapper {

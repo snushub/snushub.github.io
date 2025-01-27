@@ -75,12 +75,14 @@ class PageBuilderNew:
         with open("index.html", "r", encoding="utf-8") as file:
             self.index_html_content = file.read()
 
-        main_index = self.index_html_content.find("<main>") + len("<main>")
+        home_page = self.index_html_content.find('class="home-page">') + len(
+            'class="home-page">'
+        )
 
         new_html_content = (
-            self.index_html_content[:main_index]
+            self.index_html_content[:home_page]
             + injection
-            + self.index_html_content[main_index:]
+            + self.index_html_content[home_page:]
         )
         with open("index.html", "w", encoding="utf-8") as file:
             file.write(new_html_content)
