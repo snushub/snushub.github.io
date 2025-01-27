@@ -14,7 +14,7 @@ class GraphMaker:
         self.fn = "assets/graphs/" + file_n
         self.snus_name = snus_name
         self.start_pos = (10, 390)
-        self.START = (10, 390)  # Do not overwrite
+        self.START = (13, 387)  # Do not overwrite
         self.min_x = 10
         self.max_x = self.w - 10
         self.min_y = 10
@@ -38,11 +38,47 @@ class GraphMaker:
 
     def prep(self):
         self.context.set_source_rgb(*self.gray)
-        ht = int(self.line_t / 2)
+        ht = -2
         self.context.move_to(self.min_x - ht, self.min_y + ht)
-        self.context.line_to(self.min_x - ht, self.max_y + ht)
-        self.context.line_to(self.max_x + ht, self.max_y + ht)
+        self.context.line_to(self.min_x - ht, self.max_y + ht)  # Y-axis
+        self.context.line_to(self.max_x + ht, self.max_y + ht)  # X-axis
         self.context.stroke()
+
+        # Add arrow for the Y-axis
+        arrow_size = 10
+        self.context.move_to(self.min_x - ht - arrow_size, self.min_y + ht + arrow_size)
+        self.context.line_to(self.min_x - ht, self.min_y + ht)  # Arrowhead
+        self.context.line_to(self.min_x - ht + arrow_size, self.min_y + ht + arrow_size)
+        self.context.stroke()
+
+        # Add arrow for the X-axis
+        self.context.move_to(self.max_x + ht - arrow_size, self.max_y + ht - arrow_size)
+        self.context.line_to(self.max_x + ht, self.max_y + ht)  # Arrowhead
+        self.context.line_to(self.max_x + ht - arrow_size, self.max_y + ht + arrow_size)
+        self.context.stroke()
+
+        # Add text labels for axes
+        self.context.select_font_face(
+            "Poppins", cairo.FontSlant.NORMAL, cairo.FontWeight.NORMAL
+        )
+        self.context.set_font_size(16)
+        self.context.set_source_rgb(*self.gray)
+
+        # Add "hit" next to the Y-arrow
+        y_label = "hit"
+        y_extents = self.context.text_extents(y_label)
+        y_x_pos = self.min_x + y_extents.width  # Slightly offset to the right
+        y_y_pos = self.min_y + arrow_size + 5  # Below the Y-arrow tip
+        self.context.move_to(y_x_pos, y_y_pos)
+        self.context.show_text(y_label)
+
+        # Add "time" above the X-arrow
+        x_label = "time"
+        x_extents = self.context.text_extents(x_label)
+        x_x_pos = self.max_x - x_extents.width - 5  # Slightly offset to the left
+        x_y_pos = self.max_y - arrow_size - 10  # Above the X-arrow tip
+        self.context.move_to(x_x_pos, x_y_pos)
+        self.context.show_text(x_label)
 
     def draw_curve(self, x1, y1, x2, y2, x3, y3):
         self.context.curve_to(x1, y1, x2, y2, x3, y3)
@@ -54,15 +90,20 @@ class GraphMaker:
     def convert_y(self, y):
         return int(((10 - y) / 10) * 380 + 10)
 
-    def set_points_and_draw(self, l, c):
+    def set_points_and_draw(self, l, c, hr):
         self.context.set_source_rgb(c[0] / 255.0, c[1] / 255.0, c[2] / 255.0)
         y = [self.convert_y(i) for i in l]
         coordinates = []
+
         x = int((self.lim_x - self.min_x) / (len(l) - 1))
+
         if len(l) - 1 == 1:
             self.lim_x = 250
         elif len(l) - 1 == 2:
             self.lim_x = 310
+        if hr != 0:
+            self.lim_x = hr
+
         xoff = self.min_x
         for i in y[:-1]:
             offset = int(x / 2)
@@ -112,8 +153,8 @@ class GraphMaker:
         self.context.move_to(x_pos, self.min_y * 5)
         self.context.show_text(self.snus_name)
 
-    def exec(self, l: list, colors: list):
-        if len(l) != len(colors):
+    def exec(self, l: list, colors: list, h_range: list):
+        if len(l) != len(colors) != len(h_range):
             raise ValueError(
                 "The length of the data list must match the length of the colors list."
             )
@@ -123,7 +164,7 @@ class GraphMaker:
             self.add_snus_name()
         for i, x in enumerate(l):
             self.start_pos = self.START
-            self.set_points_and_draw(x, colors[i])
+            self.set_points_and_draw(x, colors[i], h_range[i])
 
         self.prep()
         self.export()
@@ -167,6 +208,8 @@ if __name__ == "__main__":
 
     gm = GraphMaker(8, "killa_blue_raspberry.svg", "Killa Blue Raspberry")
     y = [4, 1.5]
-    gm.exec([y], [deep_sky_blue])
+    # self.lim_x = 410
+    # If you do not want to change the range, then hr => 0
+    gm.exec([y], [deep_sky_blue], [40])
 
     sys.exit()

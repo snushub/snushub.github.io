@@ -62,7 +62,7 @@ class PageBuilderNew:
         injection = (
             '<a href="'
             + self.output_file
-            + '" class="link-wrapper"> <div class="snus-box">'
+            + '" class="link-wrapper"> <div class="snus-box-main">'
         )
         injection += "<h3>" + self.snus_name + "</h3>"
         injection += (
