@@ -206,10 +206,10 @@ if __name__ == "__main__":
     medium_sea_green = (60, 179, 113)
     sandy_brown = (244, 164, 96)
 
-    gm = GraphMaker(8, "killa_blue_raspberry.svg", "Killa Blue Raspberry")
-    y = [4, 1.5]
+    gm = GraphMaker(8, "pablo_x_ice_cold_mini.svg", "Pablo X-Ice Cold Mini")
+    y = [5, 3]
     # self.lim_x = 410
     # If you do not want to change the range, then hr => 0
-    gm.exec([y], [deep_sky_blue], [40])
+    gm.exec([y], [tomato], [20])
 
     sys.exit()
