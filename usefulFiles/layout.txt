@@ -17,8 +17,6 @@ Further information toggle list:
 3. AURA
 4. Recommendation
 
-
-
 dict = {
         page_title
         snus_name
@@ -40,6 +38,35 @@ dict = {
         aura
         recommendation
 }
+
+
+
+
+
+
+
+JSON TEMPLATE
+        {
+                "name": "",
+                "image_path": ".png",
+                "graph_path": ".svg",
+                "page_path": ".html",
+                "overall_rating": ,
+                "nicotine": ,
+                "quantity": ,
+                "price": ,
+                "hit_strength": ,
+                "hit_qualtiy": ,
+                "taste": ,
+                "smell": ,
+                "drip_taste": ,
+                "design": ,
+                "pouch_size": ".",
+                "reusability": ".",
+                "aura": ".",
+                "recommendation": "."
+        }
+        
 
 
 
