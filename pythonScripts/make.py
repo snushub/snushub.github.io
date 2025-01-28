@@ -19,6 +19,12 @@ class Make:
         d = self.data[1]
         print(d["name"])
 
+    def create_graph(self):
+        pass
+
+    def create_page(self):
+        pass
+
 
 if __name__ == "__main__":
     m = Make()

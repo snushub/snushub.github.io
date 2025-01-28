@@ -5,6 +5,8 @@ SHALLOW:
     - make the progress-bar explode or be colored when something exceeds the boundary
     - add a gum-destroyer rating
     - spelling misakes
+    - add GRAPH DATA TO JSON FILE
+    - fix paths
 
 DEEP: 
     - add a buying guide that matches a snus to a buyers desires
