@@ -101,6 +101,7 @@ class PageBuilderNew:
             file.write(new_html_content)
 
 
-xs = PageBuilderNew()
-xs.load_and_replace_template()
-xs.add_link_to_page_index()
+if __name__ == "__main__":
+    xs = PageBuilderNew()
+    xs.load_and_replace_template()
+    xs.add_link_to_page_index()

@@ -6,15 +6,21 @@ import json
 class Make:
     def __init__(self):
         self.json_path = (
-            "Users/lord/programming/snushub.github.io/usefulFiles/snus_data.json"
+            "/Users/lord/programming/snushub.github.io/usefulFiles/snus_data.json"
         )
+        self.data = []  # all the content from snus_data.json
 
-    def parse_json(self):
-        with open("data.json", "r") as file:
-            data = json.load(file)
-            print(data)
-            print(data["key"])
+    def get_json_data(self):
+        with open(self.json_path, "r") as file:
+            self.data = json.load(file)
+
+    def print_data(self):
+        # how to access data
+        d = self.data[1]
+        print(d["name"])
 
 
 if __name__ == "__main__":
     m = Make()
+    m.get_json_data()
+    m.print_data()
