@@ -178,5 +178,25 @@
         "reusability": "Do not bother.",
         "aura": "Candys is a refreshing newcomer to this world.",
         "recommendation": "There are better alternatives out there. If you seek an out-of-the-ordinary experience this might be the one."
+    },
+    {
+        "name": "Nois Extreme Cool",
+        "image_path": "nois_extreme_cool.png",
+        "graph_path": "nois_extreme_cool.svg",
+        "page_path": "nois_extreme_cool.html",
+        "overall_rating": 6.5,
+        "nicotine": 17.5,
+        "quantity": 33,
+        "price": 3.99,
+        "hit_strength": 4.5,
+        "hit_qualtiy": 7,
+        "taste": 6,
+        "smell": 8,
+        "drip_taste": 4.5,
+        "design": 8.5,
+        "pouch_size": "Mini.",
+        "reusability": "Please let them dry before reusing them.",
+        "aura": "Nois is not in the mainstream yet but has lots of potential.",
+        "recommendation": "These pouches are a good choice if you are on a budget."
     }
 ]

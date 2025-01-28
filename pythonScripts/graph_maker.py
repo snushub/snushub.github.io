@@ -1,5 +1,6 @@
 import cairo
 import sys
+import os
 
 
 class GraphMaker:
@@ -11,7 +12,7 @@ class GraphMaker:
         self.h = 400
         self.line_t = line_t
         self.line_c = (139 / 255.0, 0 / 255.0, 139 / 255.0)  # Scaled to [0, 1]
-        self.fn = "../assets/graphs/" + file_n
+        self.fn = "/Users/lord/programming/snushub.github.io/assets/graphs/" + file_n
         self.snus_name = snus_name
         self.start_pos = (10, 390)
         self.START = (13, 387)  # Do not overwrite
@@ -206,10 +207,10 @@ if __name__ == "__main__":
     medium_sea_green = (60, 179, 113)
     sandy_brown = (244, 164, 96)
 
-    gm = GraphMaker(8, "pablo_x_ice_cold_mini.svg", "Pablo X-Ice Cold Mini")
-    y = [5, 3]
+    gm = GraphMaker(8, "nois_extreme_cool.svg", "Nois Extreme Cool")
+    y = [4.5, 3]
     # self.lim_x = 410
     # If you do not want to change the range, then hr => 0
-    gm.exec([y], [tomato], [20])
+    gm.exec([y], [dodger_blue], [5])
 
     sys.exit()

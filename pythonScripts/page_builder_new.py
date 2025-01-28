@@ -46,13 +46,18 @@ class PageBuilderNew:
         )
 
     def load_and_replace_template(self):
-        with open("../assets/templates/first_template.txt", "r") as file:
+        with open(
+            "/Users/lord/programming/snushub.github.io/assets/templates/first_template.txt",
+            "r",
+        ) as file:
             template = file.read()
         # Inject the content into the template
         html_content = template.format(**self.data)
 
         # Save the result to a new HTML file
-        self.output_file = "../snusRatingPages/" + self.filename
+        self.output_file = (
+            "/Users/lord/programming/snushub.github.io/snusRatingPages/" + self.filename
+        )
         with open(self.output_file, "w") as file:
             file.write(html_content)
 
@@ -72,7 +77,11 @@ class PageBuilderNew:
             + '" class="fullscreen-image"></div> </a>'
         )
 
-        with open("../index.html", "r", encoding="utf-8") as file:
+        with open(
+            "/Users/lord/programming/snushub.github.io/index.html",
+            "r",
+            encoding="utf-8",
+        ) as file:
             self.index_html_content = file.read()
 
         home_page = self.index_html_content.find('class="home-page">') + len(
@@ -84,7 +93,11 @@ class PageBuilderNew:
             + injection
             + self.index_html_content[home_page:]
         )
-        with open("../index.html", "w", encoding="utf-8") as file:
+        with open(
+            "/Users/lord/programming/snushub.github.io/index.html",
+            "w",
+            encoding="utf-8",
+        ) as file:
             file.write(new_html_content)
 
 

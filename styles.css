@@ -107,10 +107,20 @@ footer {
     flex-direction: row;
 }
 
+.rating-box-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.rating-box-text div{
+  width: 100%;
+}
+
 #first {
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
 }
 
