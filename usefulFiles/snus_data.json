@@ -198,5 +198,25 @@
         "reusability": "Please let them dry before reusing them.",
         "aura": "Nois is not in the mainstream yet but has lots of potential.",
         "recommendation": "These pouches are a good choice if you are on a budget."
+    },
+    {
+        "name": "Pablo Mocca",
+        "image_path": "pablo_mocca.png",
+        "graph_path": "pablo_mocca.svg",
+        "page_path": "pablo_mocca.html",
+        "overall_rating": 7.5,
+        "nicotine": 30,
+        "quantity": 20,
+        "price": 3.99,
+        "hit_strength": 6.5,
+        "hit_qualtiy": 8,
+        "taste": 7.5,
+        "smell": 11,
+        "drip_taste": 7.5,
+        "design": 5.5,
+        "pouch_size": "Long.",
+        "reusability": "Can be reused multiple times.",
+        "aura": "Pablo is a brand known to produce strong and high quality pouches.",
+        "recommendation": "These are a very good option for intermediate users as well as experts. Consider them if you are looking for very good tasting snus."
     }
 ]
