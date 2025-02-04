@@ -17,7 +17,8 @@
         "pouch_size": "A bit wider than normal.",
         "reusability": "Can be reused multiple times.",
         "aura": "This snus is considered to be the holy grail of pouches.",
-        "recommendation": "Only for experienced users. Not to be messed with! Be careful: It might overwhelm you in some situations."
+        "recommendation": "Only for experienced users. Not to be messed with! Be careful: It might overwhelm you in some situations.",
+        "graph_data": []
     },
     {
         "name": "Cuba Black Cherry",
@@ -37,7 +38,8 @@
         "pouch_size": "A bit wider than normal.",
         "reusability": "Can be reused multiple times.",
         "aura": "This snus is considered to be the holy grail of pouches.",
-        "recommendation": "Only for experienced users. Not to be messed with! Be careful: It might overwhelm you in some situations."
+        "recommendation": "Only for experienced users. Not to be messed with! Be careful: It might overwhelm you in some situations.",
+        "graph_data": []
     },
     {
         "name": "Garant Cherry",
@@ -57,7 +59,8 @@
         "pouch_size": "Normal.",
         "reusability": "No issue in reusing the pouch.",
         "aura": "The brand is not well known but considered to be a soild one.",
-        "recommendation": "For users with intermediate experience."
+        "recommendation": "For users with intermediate experience.",
+        "graph_data": []
     },
     {
         "name": "Killa Blue Raspberry",
@@ -77,7 +80,8 @@
         "pouch_size": "Normal.",
         "reusability": "Not recommended as it will immediatly start to drip.",
         "aura": "Killa is a very well known and respected brand.",
-        "recommendation": "Good option for beginners."
+        "recommendation": "Good option for beginners.",
+        "graph_data": []
     },
     {
         "name": "Baron Fruit Cocktail",
@@ -97,7 +101,8 @@
         "pouch_size": "Normal.",
         "reusability": "Can be reused multiple times.",
         "aura": "Baron is not very well known but we believe that it will gain popularity.",
-        "recommendation": "Please be careful, since these are very strong."
+        "recommendation": "Please be careful, since these are very strong.",
+        "graph_data": []
     },
     {
         "name": "Iceberg Melon Peach",
@@ -117,7 +122,8 @@
         "pouch_size": "Normal.",
         "reusability": "Can be reused multiple times.",
         "aura": "Iceberg is a solid brand that produces high quality products.",
-        "recommendation": "For people that have had some experience with nicotine."
+        "recommendation": "For people that have had some experience with nicotine.",
+        "graph_data": []
     },
     {
         "name": "Iceberg Emerald",
@@ -137,7 +143,8 @@
         "pouch_size": "Normal.",
         "reusability": "Can be reused multiple times.",
         "aura": "Iceberg is a solid and well known brand. Some people handle these pouches carefully.",
-        "recommendation": "For people that have had some experience with nicotine."
+        "recommendation": "For people that have had some experience with nicotine.",
+        "graph_data": []
     },
     {
         "name": "Pablo X-Ice Cold Mini",
@@ -157,7 +164,8 @@
         "pouch_size": "Mini.",
         "reusability": "Can be reused but we recommend the pouch to be dry.",
         "aura": "Pablos are generally considered to be strong. Keep in mind that the mini format has an impact on the hit.",
-        "recommendation": "If you want to get into the wonderful world of Pablo, these pouches are for you."
+        "recommendation": "If you want to get into the wonderful world of Pablo, these pouches are for you.",
+        "graph_data": []
     },
     {
         "name": "Candys Watermelon",
@@ -177,7 +185,8 @@
         "pouch_size": "A bit longer than normal.",
         "reusability": "Do not bother.",
         "aura": "Candys is a refreshing newcomer to this world.",
-        "recommendation": "There are better alternatives out there. If you seek an out-of-the-ordinary experience this might be the one."
+        "recommendation": "There are better alternatives out there. If you seek an out-of-the-ordinary experience this might be the one.",
+        "graph_data": []
     },
     {
         "name": "Nois Extreme Cool",
@@ -197,7 +206,8 @@
         "pouch_size": "Mini.",
         "reusability": "Please let them dry before reusing them.",
         "aura": "Nois is not in the mainstream yet but has lots of potential.",
-        "recommendation": "These pouches are a good choice if you are on a budget."
+        "recommendation": "These pouches are a good choice if you are on a budget.",
+        "graph_data": []
     },
     {
         "name": "Pablo Mocca",
@@ -217,6 +227,49 @@
         "pouch_size": "Long.",
         "reusability": "Can be reused multiple times.",
         "aura": "Pablo is a brand known to produce strong and high quality pouches.",
-        "recommendation": "These are a very good option for intermediate users as well as experts. Consider them if you are looking for very good tasting snus."
+        "recommendation": "These are a very good option for intermediate users as well as experts. Consider them if you are looking for very good tasting snus.",
+        "graph_data": []
+    },
+    {
+        "name": "Noto Pine",
+        "image_path": "noto_pine.png",
+        "graph_path": "noto_pine.svg",
+        "page_path": "noto_pine.html",
+        "overall_rating": 8,
+        "nicotine": 8.4,
+        "quantity": 20,
+        "price": 4.30,
+        "hit_strength": 3,
+        "hit_qualtiy": 9,
+        "taste": 7,
+        "smell": 6,
+        "drip_taste": 9,
+        "design": 9.5,
+        "pouch_size": "Normal.",
+        "reusability": "They can be reused but the hit won't be strong.",
+        "aura": "Unknown brand.",
+        "recommendation": "These pouches are a very solid option for beginners, they are high quality and do not drip. Great for beginning your yourney.",
+        "graph_data": []
+    },
+    {
+        "name": "Noto Cedar",
+        "image_path": "noto_cedar.png",
+        "graph_path": "noto_cedar.svg",
+        "page_path": "noto_cedar.html",
+        "overall_rating": 7.5,
+        "nicotine": 8.4,
+        "quantity": 20,
+        "price": 4.30,
+        "hit_strength": 3,
+        "hit_qualtiy": 9,
+        "taste": 7,
+        "smell": 5,
+        "drip_taste": 9,
+        "design": 9.5,
+        "pouch_size": "Normal.",
+        "reusability": "They can be reused but the hit won't be strong.",
+        "aura": "Unknown brand.",
+        "recommendation": "These pouches are a very solid option for beginners, they are high quality and do not drip. Great for beginning your yourney. ",
+        "graph_data": []
     }
 ]

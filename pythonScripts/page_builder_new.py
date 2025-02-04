@@ -1,27 +1,46 @@
 class PageBuilderNew:
-    def __init__(self):
-        self.filename = str(input("Filename -> "))
-
-        self.snus_name = str(input("Snus name -> "))
+    def __init__(
+        self,
+        filename,
+        snus_name,
+        img_filename,
+        svg_filename,
+        overall,
+        nicotine,
+        quantity,
+        price,
+        hit_s,
+        hit_q,
+        taste,
+        smell,
+        drip_taste,
+        design,
+        pouch_size,
+        reusability,
+        aura,
+        recommendation,
+    ):
+        self.filename = str(filename)
+        self.snus_name = str(snus_name)
         self.page_title = self.snus_name.lower().replace(" ", "-")
-        self.img_filename = str(input("Image filename -> "))
-        self.img_filename_svg = str(input("SVG Image filename -> "))
-        self.overall_rating = str(float(input("Overall rating -> ")))
+        self.img_filename = str(img_filename)
+        self.img_filename_svg = str(svg_filename)
+        self.overall_rating = str(overall)
         self.i_p = str(float(self.overall_rating) * 10)
         self.overlay_w = str(100 - float(self.i_p))
-        self.nicotine = str(input("Nicotine -> "))
-        self.quantity = str(input("Quantity -> "))
-        self.price = str(input("Price -> "))
-        self.hit_s = str(float(input("Hit strength -> ")) * 10)
-        self.taste = str(float(input("Taste -> ")) * 10)
-        self.smell = str(float(input("Smell -> ")) * 10)
-        self.hit_q = str(float(input("Hit quality -> ")) * 10)
-        self.drip_t = str(float(input("Drip taste -> ")) * 10)
-        self.design = str(float(input("Design -> ")) * 10)
-        self.pouch_size = str(input("Pouch size -> "))
-        self.reusability = str(input("Reusability -> "))
-        self.aura = str(input("Aura -> "))
-        self.recommendation = str(input("Recommendation -> "))
+        self.nicotine = str(nicotine)
+        self.quantity = str(quantity)
+        self.price = str(price)
+        self.hit_s = str(float(hit_s) * 10)
+        self.taste = str(float(taste) * 10)
+        self.smell = str(float(smell) * 10)
+        self.hit_q = str(float(hit_q) * 10)
+        self.drip_t = str(float(drip_taste) * 10)
+        self.design = str(float(design) * 10)
+        self.pouch_size = pouch_size
+        self.reusability = str(reusability)
+        self.aura = str(aura)
+        self.recommendation = str(recommendation)
 
         self.data = dict(
             page_title=self.page_title,
@@ -66,7 +85,8 @@ class PageBuilderNew:
     def add_link_to_page_index(self):
         injection = (
             '<a href="'
-            + self.output_file
+            + "snusRatingPages/"
+            + self.filename
             + '" class="link-wrapper"> <div class="snus-box-main">'
         )
         injection += "<h3>" + self.snus_name + "</h3>"
