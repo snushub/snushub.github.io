@@ -1,10 +1,10 @@
 class PageBuilderNew:
     def __init__(
         self,
-        filename,
         snus_name,
         img_filename,
         svg_filename,
+        filename,
         overall,
         nicotine,
         quantity,
