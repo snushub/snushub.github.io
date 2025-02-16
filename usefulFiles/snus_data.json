@@ -18,7 +18,8 @@
         "reusability": "Can be reused multiple times.",
         "aura": "This snus is considered to be the holy grail of pouches.",
         "recommendation": "Only for experienced users. Not to be messed with! Be careful: It might overwhelm you in some situations.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Cuba Black Cherry",
@@ -39,7 +40,8 @@
         "reusability": "Can be reused multiple times.",
         "aura": "This snus is considered to be the holy grail of pouches.",
         "recommendation": "Only for experienced users. Not to be messed with! Be careful: It might overwhelm you in some situations.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Garant Cherry",
@@ -60,7 +62,8 @@
         "reusability": "No issue in reusing the pouch.",
         "aura": "The brand is not well known but considered to be a soild one.",
         "recommendation": "For users with intermediate experience.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Killa Blue Raspberry",
@@ -81,7 +84,8 @@
         "reusability": "Not recommended as it will immediatly start to drip.",
         "aura": "Killa is a very well known and respected brand.",
         "recommendation": "Good option for beginners.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Baron Fruit Cocktail",
@@ -102,7 +106,8 @@
         "reusability": "Can be reused multiple times.",
         "aura": "Baron is not very well known but we believe that it will gain popularity.",
         "recommendation": "Please be careful, since these are very strong.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Iceberg Melon Peach",
@@ -123,7 +128,8 @@
         "reusability": "Can be reused multiple times.",
         "aura": "Iceberg is a solid brand that produces high quality products.",
         "recommendation": "For people that have had some experience with nicotine.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Iceberg Emerald",
@@ -144,7 +150,8 @@
         "reusability": "Can be reused multiple times.",
         "aura": "Iceberg is a solid and well known brand. Some people handle these pouches carefully.",
         "recommendation": "For people that have had some experience with nicotine.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Pablo X-Ice Cold Mini",
@@ -165,7 +172,8 @@
         "reusability": "Can be reused but we recommend the pouch to be dry.",
         "aura": "Pablos are generally considered to be strong. Keep in mind that the mini format has an impact on the hit.",
         "recommendation": "If you want to get into the wonderful world of Pablo, these pouches are for you.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Candys Watermelon",
@@ -186,7 +194,8 @@
         "reusability": "Do not bother.",
         "aura": "Candys is a refreshing newcomer to this world.",
         "recommendation": "There are better alternatives out there. If you seek an out-of-the-ordinary experience this might be the one.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Nois Extreme Cool",
@@ -207,7 +216,8 @@
         "reusability": "Please let them dry before reusing them.",
         "aura": "Nois is not in the mainstream yet but has lots of potential.",
         "recommendation": "These pouches are a good choice if you are on a budget.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Pablo Mocca",
@@ -228,7 +238,8 @@
         "reusability": "Can be reused multiple times.",
         "aura": "Pablo is a brand known to produce strong and high quality pouches.",
         "recommendation": "These are a very good option for intermediate users as well as experts. Consider them if you are looking for very good tasting snus.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Noto Pine",
@@ -249,7 +260,8 @@
         "reusability": "They can be reused but the hit won't be strong.",
         "aura": "Unknown brand.",
         "recommendation": "These pouches are a very solid option for beginners, they are high quality and do not drip. Great for beginning your yourney.",
-        "graph_data": []
+        "graph_data": [],
+        "h_range": 
     },
     {
         "name": "Noto Cedar",
@@ -270,6 +282,73 @@
         "reusability": "They can be reused but the hit won't be strong.",
         "aura": "Unknown brand.",
         "recommendation": "These pouches are a very solid option for beginners, they are high quality and do not drip. Great for beginning your yourney. ",
-        "graph_data": [] 
+        "graph_data": [],
+        "h_range": 
+    },
+    {
+        "name": "Iceberg Cola",
+        "image_path": "iceberg_cola.png",
+        "graph_path": "iceberg_cola.svg",
+        "page_path": "iceberg_cola.html",
+        "overall_rating": 8.5,
+        "nicotine": 35,
+        "quantity": 20,
+        "price": 4.49,
+        "hit_strength": 8.5,
+        "hit_qualtiy": 9,
+        "taste": 6,
+        "smell": 8,
+        "drip_taste": 6,
+        "design": 7,
+        "pouch_size": "Normal.",
+        "reusability": "YES! These pouches will never start to drip.",
+        "aura": "Iceberg is a solid and well known brand. Some people handle these pouches carefully.",
+        "recommendation": "These poches are perfect for intermediate users, who want to go pro.",
+        "graph_data": [],
+        "h_range": 
+    },
+    {
+        "name": "Pablo Kiwi",
+        "image_path": "pablo_kiwi.png",
+        "graph_path": "pablo_kiwi.svg",
+        "page_path": "pablo_kiwi.html",
+        "overall_rating": 4.5,
+        "nicotine": 30,
+        "quantity": 20,
+        "price": 3.99,
+        "hit_strength": 7.5,
+        "hit_qualtiy": 8,
+        "taste": 3,
+        "smell": 2,
+        "drip_taste": 2.5,
+        "design": 5.5,
+        "pouch_size": "Normal.",
+        "reusability": "We think that those should only be reused if you seek the hit. Keep in mind that they have to be dry; if not they'll start to drip immediatly. ",
+        "aura": "Pablo is a brand known to produce strong and high quality pouches.",
+        "recommendation": "Try them, maybe you'll like them!",
+        "graph_data": [],
+        "h_range": 
+    },
+    {
+        "name": "Iceberg Menthol",
+        "image_path": "iceberg_menthol.png",
+        "graph_path": "iceberg_menthol.svg",
+        "page_path": "iceberg_menthol.html",
+        "overall_rating": 8.5,
+        "nicotine": 35,
+        "quantity": 20,
+        "price": 4.49,
+        "hit_strength": 8,
+        "hit_qualtiy": 9,
+        "taste": 8,
+        "smell": 6,
+        "drip_taste": 6.5,
+        "design": 10,
+        "pouch_size": "Normal.",
+        "reusability": "There is no issue in reusing them. The pouch stays dry and does not drip.",
+        "aura": "Iceberg is a solid and well known brand. Some people handle these pouches carefully.",
+        "recommendation": "These pouches constitute a solid choice for intermediates as well as experts. ",
+        "graph_data": [],
+        "h_range": 
     }
 ]
