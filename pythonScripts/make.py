@@ -11,7 +11,7 @@ class Make:
         )
         self.data = []  # all the content from snus_data.json
         self.color_list = {}
-        self.color_picker = c.Colors
+        self.color_picker = c.Colors()
 
     def get_json_data(self):
         with open(self.json_path, "r") as file:
@@ -59,4 +59,4 @@ if __name__ == "__main__":
 
     m = Make()
     m.get_json_data()
-    m.make(5)
+    m.make()

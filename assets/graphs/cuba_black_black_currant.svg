@@ -86,7 +86,7 @@
 <use xlink:href="#glyph-0-10" x="569.205563" y="50"/>
 <use xlink:href="#glyph-0-11" x="580.136563" y="50"/>
 </g>
-<path fill="none" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(57.647059%, 43.921569%, 85.882353%)" stroke-opacity="1" stroke-miterlimit="10" d="M 13 387 C 67 377 31 209 85 200 C 197 191 123 37 235 29 C 395 38 289 209 450 219 M 450 219 L 580 223 "/>
+<path fill="none" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(100%, 100%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 13 387 C 85 377 37 209 110 200 C 260 191 160 37 310 29 C 415 38 345 209 450 219 M 450 219 L 580 223 "/>
 <path fill="none" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(20%, 20%, 20%)" stroke-opacity="1" stroke-miterlimit="10" d="M 12 8 L 12 388 L 588 388 "/>
 <path fill="none" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(20%, 20%, 20%)" stroke-opacity="1" stroke-miterlimit="10" d="M 2 18 L 12 8 L 22 18 "/>
 <path fill="none" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(20%, 20%, 20%)" stroke-opacity="1" stroke-miterlimit="10" d="M 578 378 L 588 388 L 578 398 "/>
